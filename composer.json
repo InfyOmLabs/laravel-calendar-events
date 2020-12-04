@@ -1,0 +1,57 @@
+{
+    "name": "infyomlabs/laravel-calendar-events",
+    "description": "Recurring Calendar Events for Laravel",
+    "keywords": [
+        "infyomlabs",
+        "laravel-calendar-events",
+        "laravel-calendar",
+        "calendar",
+        "recurring-events"
+    ],
+    "homepage": "https://github.com/infyomlabs/laravel-calendar-events",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mitul Golakiya",
+            "email": "me@mitul.me"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0|^7.0|^8.0",
+        "simshaun/recurr": "^4.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "InfyOm\\LaravelCalendarEvents\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "InfyOm\\LaravelCalendarEvents\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "InfyOm\\LaravelCalendarEvents\\LaravelCalendarEventsServiceProvider"
+            ],
+            "aliases": {
+                "LaravelCalendarEvents": "InfyOm\\LaravelCalendarEvents\\LaravelCalendarEventsFacade"
+            }
+        }
+    }
+}
