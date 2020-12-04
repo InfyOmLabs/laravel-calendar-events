@@ -72,6 +72,22 @@ class CalendarEventRecurrencePattern extends BaseDTO
     }
 
     /**
+     * @param int $maxOccurrences
+     */
+    public function setMaxOccurrences(int $maxOccurrences)
+    {
+        $this->max_occurrences = $maxOccurrences;
+    }
+
+    /**
+     * @param int $repeatInterval
+     */
+    public function setRepeatInterval(int $repeatInterval)
+    {
+        $this->repeat_interval = $repeatInterval;
+    }
+
+    /**
      * @param array $repeatDays
      * @throws \Exception
      */

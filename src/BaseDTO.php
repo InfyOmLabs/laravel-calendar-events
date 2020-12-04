@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BaseDTO
 {
-    public function __construct($attributes)
+    public function __construct($attributes = [])
     {
         if ($attributes instanceof Model) {
             $attributes = $attributes->toArray();
