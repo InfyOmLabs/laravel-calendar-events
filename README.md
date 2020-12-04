@@ -1,9 +1,9 @@
-# Very short description of the package
+# Laravel Calendar Recurring Events
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/infyomlabs/laravel-calendar-events.svg?style=flat-square)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
-[![Build Status](https://img.shields.io/travis/infyomlabs/laravel-calendar-events/master.svg?style=flat-square)](https://travis-ci.org/infyomlabs/laravel-calendar-events)
-[![Quality Score](https://img.shields.io/scrutinizer/g/infyomlabs/laravel-calendar-events.svg?style=flat-square)](https://scrutinizer-ci.com/g/infyomlabs/laravel-calendar-events)
-[![Total Downloads](https://img.shields.io/packagist/dt/infyomlabs/laravel-calendar-events.svg?style=flat-square)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
+[![Total Downloads](https://poser.pugx.org/infyomlabs/laravel-calendar-events/downloads)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
+[![Monthly Downloads](https://poser.pugx.org/infyomlabs/laravel-calendar-events/d/monthly)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
+[![Daily Downloads](https://poser.pugx.org/infyomlabs/laravel-calendar-events/d/daily)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
+[![License](https://poser.pugx.org/infyomlabs/laravel-calendar-events/license)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
 
 Calculate Laravel Calendar Recurring Events.
 No need to store all million possible future events into Database.
