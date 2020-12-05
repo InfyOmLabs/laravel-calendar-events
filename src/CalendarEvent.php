@@ -117,8 +117,8 @@ class CalendarEvent extends BaseDTO
         if (!is_null($numberOfOccurrences)) {
             $rule->setCount($numberOfOccurrences);
         } else {
-            if (!empty($recurringPattern->max_occurrences)) {
-                $rule->setCount($recurringPattern->max_occurrences);
+            if (!empty($this->recurring_pattern->max_occurrences)) {
+                $rule->setCount($this->recurring_pattern->max_occurrences);
             }
         }
 
