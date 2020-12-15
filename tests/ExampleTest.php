@@ -2,12 +2,11 @@
 
 namespace InfyOm\LaravelCalendarEvents\Tests;
 
+use InfyOm\LaravelCalendarEvents\LaravelCalendarEventsServiceProvider;
 use Orchestra\Testbench\TestCase;
-use Infyomlabs\LaravelCalendarEvents\LaravelCalendarEventsServiceProvider;
 
 class ExampleTest extends TestCase
 {
-
     protected function getPackageProviders($app)
     {
         return [LaravelCalendarEventsServiceProvider::class];
