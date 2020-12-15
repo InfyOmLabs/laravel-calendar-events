@@ -6,8 +6,8 @@
 [![License](https://poser.pugx.org/infyomlabs/laravel-calendar-events/license)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
 
 Calculate Laravel Calendar Recurring Events.
-No need to store all million possible future events into Database.
-No Cron needed to Generate Monthly events for Database.
+No need to store all millions of possible future events into Database.
+No Cron needed to Generate Monthly events for the Database.
 
 1. Create `CalendarEvent` Object from your Laravel Eloquent Model
 2. Specify Recurring Pattern (Daily, Weekly, Monthly, Yearly along with options)
@@ -107,7 +107,7 @@ composer test
 
 ### Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
@@ -115,7 +115,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email labs@infyom.com instead of using the issue tracker.
+If you discover any security-related issues, please email labs@infyom.com instead of using the issue tracker.
 
 ## Credits
 
