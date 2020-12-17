@@ -3,6 +3,7 @@
 [![Total Downloads](https://poser.pugx.org/infyomlabs/laravel-calendar-events/downloads)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
 [![Monthly Downloads](https://poser.pugx.org/infyomlabs/laravel-calendar-events/d/monthly)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
 [![Daily Downloads](https://poser.pugx.org/infyomlabs/laravel-calendar-events/d/daily)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
+![Test](https://github.com/InfyOmLabs/laravel-calendar-events/workflows/Tests/badge.svg)
 [![License](https://poser.pugx.org/infyomlabs/laravel-calendar-events/license)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
 
 Calculate Laravel Calendar Recurring Events.
