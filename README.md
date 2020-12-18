@@ -135,7 +135,3 @@ You can also check out our other paid products on [CodeCanyon](https://codecanyo
 ## Made with InfyOm Generator
 
 Also, Do not forget to add your website to [Made with InfyOm Generator List](https://github.com/InfyOmLabs/laravel-generator/blob/develop/made-with-generator.md) list.
-
-## Video Tutorials
-
-Checkout [Video Tutorials](https://github.com/shailesh-ladumor/infyom-laravel-generator-tutorial) - **By**: [Shailesh Ladumor](https://github.com/shailesh-ladumor)
