@@ -140,7 +140,3 @@ You can also check out our other paid products on [CodeCanyon](https://codecanyo
 - [LinkedIn](https://in.linkedin.com/company/infyom-technologies)
 - [Youtube](https://www.youtube.com/channel/UC8IvwfChD6i7Wp4yZp3tNsQ)
 - [Contact Us](https://infyom.com/contact-us)
-
-## Made with InfyOm Generator
-
-Also, Do not forget to add your website to [Made with InfyOm Generator List](https://github.com/InfyOmLabs/laravel-generator/blob/develop/made-with-generator.md) list.
