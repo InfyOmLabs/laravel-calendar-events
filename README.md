@@ -1,9 +1,11 @@
-# Laravel Calendar Recurring Events
+<h1 align="center"><img src="https://assets.infyom.com/open-source/infyom-logo.png" alt="InfyOm"></h1>
+
+Laravel Calendar Recurring Events
+==========================
 
 [![Total Downloads](https://poser.pugx.org/infyomlabs/laravel-calendar-events/downloads)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
 [![Monthly Downloads](https://poser.pugx.org/infyomlabs/laravel-calendar-events/d/monthly)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
 [![Daily Downloads](https://poser.pugx.org/infyomlabs/laravel-calendar-events/d/daily)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
-![Test](https://github.com/InfyOmLabs/laravel-calendar-events/workflows/Tests/badge.svg)
 [![License](https://poser.pugx.org/infyomlabs/laravel-calendar-events/license)](https://packagist.org/packages/infyomlabs/laravel-calendar-events)
 
 Calculate Laravel Calendar Recurring Events.
@@ -106,14 +108,9 @@ You can also call direct functions on `CalendarEvent` class,
 composer test
 ```
 
-### Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
 ## Support Us
 
-We have created [14+ Laravel packages](https://github.com/InfyOmLabs) which got over 2M+ Downloads so far.
-We invested a lot of resources into creating these packages and maintaining them.
+We have created [14+ Laravel packages](https://github.com/InfyOmLabs) and invested a lot of resources into creating these all packages and maintaining them.
 
 You can support us by either sponsoring us or buying one of our paid products. Or help us by spreading the word about us on social platforms via tweets and posts.
 
@@ -131,35 +128,14 @@ You can support us by either sponsoring us or buying one of our paid products. O
 
 ### Buy our Paid Products
 
-[![InfyJobs](https://assets.infyom.com/open-source/infyjobs-banner.png)](https://codecanyon.net/item/infyjobs-laravel-job-portal-script-with-website/28321916)
+[![InfyChat](https://assets.infyom.com/open-source/infyjobs-banner.png)](https://codecanyon.net/item/infyjobs-laravel-job-portal-script-with-website/28321916)
 
 You can also check out our other paid products on [CodeCanyon](https://codecanyon.net/user/infyomlabs/portfolio).
 
-### Follow Us
+## Made with InfyOm Generator
 
-- [Twitter](https://twitter.com/infyom)
-- [Facebook](https://www.facebook.com/infyom)
-- [LinkedIn](https://in.linkedin.com/company/infyom-technologies)
-- [Youtube](https://www.youtube.com/channel/UC8IvwfChD6i7Wp4yZp3tNsQ)
-- [Contact Us](https://infyom.com/contact-us)
+Also, Do not forget to add your website to [Made with InfyOm Generator List](https://github.com/InfyOmLabs/laravel-generator/blob/develop/made-with-generator.md) list.
 
-## Contributing
+## Video Tutorials
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-### Security
-
-If you discover any security-related issues, please email labs@infyom.com instead of using the issue tracker.
-
-## Credits
-
-- [InfyOmLabs](https://github.com/infyomlabs)
-- [All Contributors](../../contributors)
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
+Checkout [Video Tutorials](https://github.com/shailesh-ladumor/infyom-laravel-generator-tutorial) - **By**: [Shailesh Ladumor](https://github.com/shailesh-ladumor)
