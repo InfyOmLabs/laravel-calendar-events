@@ -266,7 +266,7 @@ class CalendarEvent extends BaseDTO
     {
         $orgEvent = clone $this;
 
-        if ($this->start_date > $endDate or $startDate > $this->end_date) {
+        if ($this->start_date > $endDate or !empty($this->end_date) and $startDate > $this->end_date) {
             return [];
         }
 
