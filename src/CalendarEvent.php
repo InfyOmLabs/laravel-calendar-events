@@ -46,7 +46,7 @@ class CalendarEvent extends BaseDTO
     /** @var CalendarEventRecurrencePattern */
     public $recurring_pattern;
 
-    public function __construct($attributes)
+    public function __construct($attributes = [])
     {
         parent::__construct($attributes);
 

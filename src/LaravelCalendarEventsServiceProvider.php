@@ -54,7 +54,7 @@ class LaravelCalendarEventsServiceProvider extends ServiceProvider
 
         // Register the main class to use with the facade
         $this->app->singleton('laravel-calendar-events', function () {
-            return new CalendarEvent;
+            return new CalendarEvent([]);
         });
     }
 }
