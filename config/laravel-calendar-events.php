@@ -6,8 +6,8 @@
 return [
 
     /**
-     * Start Day of the Week
+     * Start Day of the Week.
      */
-    'week_starts' => "MO"
+    'week_starts' => 'MO',
 
 ];

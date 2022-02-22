@@ -21,7 +21,7 @@ class LaravelCalendarEventsServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/laravel-calendar-events.php' => config_path('laravel-calendar-events.php'),
+                __DIR__.'/../config/laravel-calendar-events.php' => config_path('laravel-calendar-events.php'),
             ], 'config');
 
             // Publishing the views.
@@ -50,7 +50,7 @@ class LaravelCalendarEventsServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__ . '/../config/laravel-calendar-events.php', 'laravel-calendar-events');
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-calendar-events.php', 'laravel-calendar-events');
 
         // Register the main class to use with the facade
         $this->app->singleton('laravel-calendar-events', function () {

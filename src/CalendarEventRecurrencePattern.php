@@ -24,12 +24,13 @@ class CalendarEventRecurrencePattern extends BaseDTO
 
     /**
      * @param string $frequency
+     *
      * @throws \Exception
      */
     public function setRecurringType(string $frequency)
     {
         if (!in_array($frequency, RecurringFrequencyType::$recurringTypes)) {
-            throw new \Exception("Invalid Frequency");
+            throw new \Exception('Invalid Frequency');
         }
 
         $this->recurring_type = $frequency;
@@ -89,11 +90,12 @@ class CalendarEventRecurrencePattern extends BaseDTO
 
     /**
      * @param array $repeatDays
+     *
      * @throws \Exception
      */
     public function setRepeatDays(array $repeatDays)
     {
-        $validDays = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"];
+        $validDays = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
 
         foreach ($repeatDays as $day) {
             if (!in_array($day, $validDays)) {
@@ -106,6 +108,7 @@ class CalendarEventRecurrencePattern extends BaseDTO
 
     /**
      * @param array $repeatMonths
+     *
      * @throws \Exception
      */
     public function setRepeatMonths(array $repeatMonths)
