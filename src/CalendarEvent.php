@@ -108,8 +108,9 @@ class CalendarEvent extends BaseDTO
     }
 
     /**
-     * @param Rule $rule
+     * @param Rule     $rule
      * @param int|null $numberOfOccurrences
+     *
      * @return Rule
      */
     private function applyCount(Rule $rule, $numberOfOccurrences = null): Rule
@@ -127,6 +128,7 @@ class CalendarEvent extends BaseDTO
 
     /**
      * @param Rule $rule
+     *
      * @return Rule
      */
     private function applyStartDate(Rule $rule): Rule
@@ -139,6 +141,7 @@ class CalendarEvent extends BaseDTO
 
     /**
      * @param Rule $rule
+     *
      * @return Rule
      */
     private function applyEndDate(Rule $rule): Rule
@@ -153,8 +156,10 @@ class CalendarEvent extends BaseDTO
 
     /**
      * @param Rule $rule
-     * @return Rule
+     *
      * @throws \Recurr\Exception\InvalidRRule
+     *
+     * @return Rule
      */
     private function applyRepeatDays(Rule $rule): Rule
     {
@@ -167,6 +172,7 @@ class CalendarEvent extends BaseDTO
 
     /**
      * @param Rule $rule
+     *
      * @return Rule
      */
     private function applyRepeatMonths(Rule $rule): Rule
@@ -180,6 +186,7 @@ class CalendarEvent extends BaseDTO
 
     /**
      * @param Rule $rule
+     *
      * @return Rule
      */
     private function applyExcludedDates(Rule $rule): Rule
@@ -193,24 +200,29 @@ class CalendarEvent extends BaseDTO
 
     /**
      * @param Rule $rule
-     * @return Rule
+     *
      * @throws \Recurr\Exception\InvalidArgument
+     *
+     * @return Rule
      */
     private function updateRuleFromConfig(Rule $rule): Rule
     {
         $rule->setWeekStart(config('laravel-calendar-events.week_starts'));
+
         return $rule;
     }
 
     /**
      * @param null $numberOfOccurrences
-     * @return Recurrence[]
+     *
      * @throws \Exception
+     *
+     * @return Recurrence[]
      */
     public function getNextOccurrences($numberOfOccurrences = null): array
     {
         if (empty($this->end_date) and is_null($numberOfOccurrences) and empty($this->recurring_pattern->max_occurrences)) {
-            throw new \Exception("Either End Date or Number of Occurrences is required");
+            throw new \Exception('Either End Date or Number of Occurrences is required');
         }
 
         if (!$this->is_recurring or empty($this->recurring_pattern->recurring_type)) {
@@ -235,8 +247,10 @@ class CalendarEvent extends BaseDTO
 
     /**
      * @param int|null $numberOfEvents
-     * @return CalendarEvent[]
+     *
      * @throws \Exception
+     *
+     * @return CalendarEvent[]
      */
     public function getNextEvents($numberOfEvents = null): array
     {
@@ -258,9 +272,11 @@ class CalendarEvent extends BaseDTO
     /**
      * @param Carbon|\DateTime|string $startDate
      * @param Carbon|\DateTime|string $endDate
-     * @param int|null $numberOfEvents
-     * @return CalendarEvent[]
+     * @param int|null                $numberOfEvents
+     *
      * @throws \Exception
+     *
+     * @return CalendarEvent[]
      */
     public function getEventsBetween($startDate, $endDate, $numberOfEvents = null): array
     {
