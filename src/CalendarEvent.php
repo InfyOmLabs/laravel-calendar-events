@@ -286,9 +286,9 @@ class CalendarEvent extends BaseDTO
             return [];
         }
 
-        if ($startDate > $this->start_date) {
-            $this->start_date = Carbon::parse($startDate);
-        }
+//         if ($startDate > $this->start_date) {
+//             $this->start_date = Carbon::parse($startDate);
+//         }
 
         if (empty($this->end_date)) {
             $this->end_date = Carbon::parse($endDate);
