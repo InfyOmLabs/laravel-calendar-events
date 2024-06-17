@@ -23,6 +23,10 @@ class CalendarEvent extends BaseDTO
     public $start_date;
 
     /** @var Carbon */
+    // Added by me
+    public $start_date_searched;
+
+    /** @var Carbon */
     public $end_date;
 
     /** @var string */
@@ -281,6 +285,9 @@ class CalendarEvent extends BaseDTO
     public function getEventsBetween($startDate, $endDate, $numberOfEvents = null): array
     {
         $orgEvent = clone $this;
+
+        $this->start_date_searched = Carbon::parse($startDate);
+
 
         if ($this->start_date > $endDate or !empty($this->end_date) and $startDate > $this->end_date) {
             return [];
