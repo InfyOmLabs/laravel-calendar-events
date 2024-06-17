@@ -20,7 +20,7 @@ You can support us by either sponsoring us or buying one of our paid products. O
 
 ### Buy our Paid Products
 
-[![InfyHMS](https://assets.infyom.com/open-source/new/infyhms-banner.png)](https://1.envato.market/6by5EQ)
+[![InfyGPT](https://assets.infyom.com/open-source/infygpt-inline.png)](https://bit.ly/infy-gpt)
 
 You can also check out our other paid products on [CodeCanyon](https://1.envato.market/BXAnR1).
 
