@@ -137,7 +137,8 @@ class CalendarEvent extends BaseDTO
      */
     private function applyStartDate(Rule $rule): Rule
     {
-        $startDate = Carbon::parse($this->start_date)->setTimeFromTimeString($this->start_time);
+        $date= $this->start_date_searched?$this->start_date_searched:$this->start_date;
+        $startDate = Carbon::parse($date)->setTimeFromTimeString($this->start_time);
         $rule->setStartDate($startDate);
 
         return $rule;
