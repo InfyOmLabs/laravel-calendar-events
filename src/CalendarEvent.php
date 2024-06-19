@@ -137,7 +137,8 @@ class CalendarEvent extends BaseDTO
      */
     private function applyStartDate(Rule $rule): Rule
     {
-        $date= $this->start_date_searched?$this->start_date_searched:$this->start_date;
+        // $date= $this->start_date_searched?$this->start_date_searched:$this->start_date;
+        $date = $this->start_date;
         $startDate = Carbon::parse($date)->setTimeFromTimeString($this->start_time);
         $rule->setStartDate($startDate);
 
@@ -287,16 +288,16 @@ class CalendarEvent extends BaseDTO
     {
         $orgEvent = clone $this;
 
-        $this->start_date_searched = Carbon::parse($startDate);
+        // $this->start_date_searched = Carbon::parse($startDate);
 
 
         if ($this->start_date > $endDate or !empty($this->end_date) and $startDate > $this->end_date) {
             return [];
         }
 
-//         if ($startDate > $this->start_date) {
-//             $this->start_date = Carbon::parse($startDate);
-//         }
+        //         if ($startDate > $this->start_date) {
+        //             $this->start_date = Carbon::parse($startDate);
+        //         }
 
         if (empty($this->end_date)) {
             $this->end_date = Carbon::parse($endDate);
