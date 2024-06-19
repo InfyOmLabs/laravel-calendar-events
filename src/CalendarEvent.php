@@ -29,6 +29,10 @@ class CalendarEvent extends BaseDTO
     /** @var Carbon */
     public $end_date;
 
+    /** @var Carbon */
+    // Added by me
+    public $end_date_searched;
+
     /** @var string */
     public $start_time;
 
@@ -266,13 +270,31 @@ class CalendarEvent extends BaseDTO
         $events = [];
 
         foreach ($nextOccurrences as $nextOccurrence) {
-            $event = clone $this;
-            $event->start_date = Carbon::parse($nextOccurrence->getStart())->setTimeFromTimeString($this->start_time);
-            $event->end_date = Carbon::parse($nextOccurrence->getEnd())->setTimeFromTimeString($this->end_time);
-            $events[] = $event;
+
+            // Vuol dire che ho usato la funzione getEventsBetween
+            if ($this->start_date_searched && $this->end_date_searched) {
+                // Controllo se l'evento è compreso tra le date cercate
+                $event = $this->cloneAndUpdateDatesOfEvent($nextOccurrence);
+                if ($event->start_date->between($this->start_date_searched, $this->end_date_searched) && $event->end_date->between($this->start_date_searched, $this->end_date_searched)) {
+                    $events[] = $event;
+                }
+            } else {
+                $event = $this->cloneAndUpdateDatesOfEvent($nextOccurrence);
+                $events[] = $event;
+            }
         }
 
         return $events;
+    }
+
+
+    private function cloneAndUpdateDatesOfEvent($occurrence)
+    {
+        $event = clone $this;
+        $event->start_date = Carbon::parse($occurrence->getStart())->setTimeFromTimeString($this->start_time);
+        $event->end_date = Carbon::parse($occurrence->getEnd())->setTimeFromTimeString($this->end_time);
+
+        return $event;
     }
 
     /**
@@ -288,7 +310,9 @@ class CalendarEvent extends BaseDTO
     {
         $orgEvent = clone $this;
 
-        // $this->start_date_searched = Carbon::parse($startDate);
+        $this->start_date_searched = Carbon::parse($startDate);
+        $this->end_date_searched = Carbon::parse($endDate);
+
 
 
         if ($this->start_date > $endDate or !empty($this->end_date) and $startDate > $this->end_date) {
