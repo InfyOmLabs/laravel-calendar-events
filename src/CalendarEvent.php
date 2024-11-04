@@ -23,7 +23,15 @@ class CalendarEvent extends BaseDTO
     public $start_date;
 
     /** @var Carbon */
+    // Added by me
+    public $start_date_searched;
+
+    /** @var Carbon */
     public $end_date;
+
+    /** @var Carbon */
+    // Added by me
+    public $end_date_searched;
 
     /** @var string */
     public $start_time;
@@ -133,7 +141,9 @@ class CalendarEvent extends BaseDTO
      */
     private function applyStartDate(Rule $rule): Rule
     {
-        $startDate = Carbon::parse($this->start_date)->setTimeFromTimeString($this->start_time);
+        // $date= $this->start_date_searched?$this->start_date_searched:$this->start_date;
+        $date = $this->start_date;
+        $startDate = Carbon::parse($date)->setTimeFromTimeString($this->start_time);
         $rule->setStartDate($startDate);
 
         return $rule;
@@ -260,13 +270,31 @@ class CalendarEvent extends BaseDTO
         $events = [];
 
         foreach ($nextOccurrences as $nextOccurrence) {
-            $event = clone $this;
-            $event->start_date = Carbon::parse($nextOccurrence->getStart())->setTimeFromTimeString($this->start_time);
-            $event->end_date = Carbon::parse($nextOccurrence->getEnd())->setTimeFromTimeString($this->end_time);
-            $events[] = $event;
+
+            // Vuol dire che ho usato la funzione getEventsBetween
+            if ($this->start_date_searched && $this->end_date_searched) {
+                // Controllo se l'evento è compreso tra le date cercate
+                $event = $this->cloneAndUpdateDatesOfEvent($nextOccurrence);
+                if ($event->start_date->between($this->start_date_searched, $this->end_date_searched) && $event->end_date->between($this->start_date_searched, $this->end_date_searched)) {
+                    $events[] = $event;
+                }
+            } else {
+                $event = $this->cloneAndUpdateDatesOfEvent($nextOccurrence);
+                $events[] = $event;
+            }
         }
 
         return $events;
+    }
+
+
+    private function cloneAndUpdateDatesOfEvent($occurrence)
+    {
+        $event = clone $this;
+        $event->start_date = Carbon::parse($occurrence->getStart())->setTimeFromTimeString($this->start_time);
+        $event->end_date = Carbon::parse($occurrence->getEnd())->setTimeFromTimeString($this->end_time);
+
+        return $event;
     }
 
     /**
@@ -282,13 +310,18 @@ class CalendarEvent extends BaseDTO
     {
         $orgEvent = clone $this;
 
+        $this->start_date_searched = Carbon::parse($startDate);
+        $this->end_date_searched = Carbon::parse($endDate);
+
+
+
         if ($this->start_date > $endDate or !empty($this->end_date) and $startDate > $this->end_date) {
             return [];
         }
 
-        if ($startDate > $this->start_date) {
-            $this->start_date = Carbon::parse($startDate);
-        }
+        //         if ($startDate > $this->start_date) {
+        //             $this->start_date = Carbon::parse($startDate);
+        //         }
 
         if (empty($this->end_date)) {
             $this->end_date = Carbon::parse($endDate);
